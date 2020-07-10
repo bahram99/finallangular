@@ -1,0 +1,12 @@
+<div class="container">
+<img style="width: 70rem; height: 50rem;" src="../../assets/image/8-tb-800x0.png">
+  <button (click)="toggle()">toggle</button>
+  <div [hidden]="!visible">
+    <ng-content></ng-content>
+  </div>
+
+  <div>Time: {{ time | async | uppercase }}</div><hr>
+  <div class="form-group" [formGroup]="heroform" >
+    name please:<input type="text" formControlName="name">
+  </div>
+</div>

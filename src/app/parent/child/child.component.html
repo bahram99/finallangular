@@ -1,0 +1,17 @@
+<div class="container" style="color: black ; margin-top: 5rem">
+  <button class="btn btn-primary" (click)="run()">show name</button>
+  <button class="btn btn-info" (click)="lastoutput()">show output</button>
+  enter : <input #input type="text">
+  <div [ngSwitch]="input">
+    <div ngsw></div>
+  </div>
+  <div class="jumbotron">
+    <p>dfdsfds</p>
+    <button class="btn btn-info" >test</button>
+    <p appChildDirect>loren epison sample text</p>
+    <p id="ty" (mouseenter)="setfalse() ; bool = !bool"  >loren test number two</p>
+    <input [(ngModel)]="rest" >
+    <p appChildDirect [setcolor]="rest" >set color green for input test in directive</p>
+    <p [style.display]="" ]>test for struct input for test</p>
+  </div>
+</div>

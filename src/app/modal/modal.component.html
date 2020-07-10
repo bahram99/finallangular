@@ -1,0 +1,13 @@
+
+  <div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+  </div>
+  <div class="modal-body">
+    <p>Hello, {{ name}}</p>
+    <input [(ngModel)]="last">
+    <button class="btn btn-dark" (click)="text()">text</button>
+  </div>
+  <div class="modal-footer">
+    <button  type="button" class="btn btn-outline-dark" (click)="activeModal.close('hichi')">Close</button>
+  </div>
+<app-milo [message]="last" > </app-milo>

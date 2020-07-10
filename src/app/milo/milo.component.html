@@ -1,0 +1,23 @@
+<div  style="margin-top: 10rem; color: white">
+  <div *ngFor="let key of objkey(item)">{{ key  }} show key</div>
+  <hr style="background-color: white">
+  <div *ngFor="let value of objvalue(item)">{{ value }} show value</div>
+
+  <h2 id="show" style="display: none;" class="">{{ str }}</h2>
+  <button class="btn btn-primary" (click)="select()" style="display: inline-flex">sservice</button>
+  <div [style]="color">lorennnnnnnn</div>
+  <div class="container-sm" >
+    <div class="jumbotron" style="margin: 0 15rem">
+      <p style="color: black;text-align: center">for open modal project click here</p>
+      <button class="btn btn-success" (click)="open()" style="margin-left: 3rem">open modal</button>
+    </div>
+  </div>
+    <h1>{{message}}</h1>
+  <div style="margin-top: 6rem; color: black " *ngIf="bool; else tty">ng if is true</div>
+  <ng-template #tty>
+    <p style="margin-top: 6rem; color: black "> test template</p>
+  </ng-template>
+  <p [hidden]="!bool" style="color: black">test text</p>
+  <button class="btn btn-primary" [ngClass]="{color: this.bool ==false}">color</button>
+</div>
+

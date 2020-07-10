@@ -1,0 +1,29 @@
+<p>user works!</p>
+<p>user work</p>
+<div class="container">
+<div class="jumbotron" style="width: 20rem; margin-left: 20rem">
+  <h4 style="margin-left: 4rem">the id if: {{ user.id }}</h4>
+  <h4 style="margin-left: 0rem">the name is : {{ user.name }}</h4>
+</div>
+  <a [routerLink]="['/user' , user.id , user.name]">callback</a>
+</div>
+<div class="container">
+<div class="jumbotron d-inline-flex">
+  <form (ngSubmit)="onfirstSubmit(a)" #a='ngForm'>
+    <div class="form-group">
+      <label >enter name</label>
+      <input class="form-inline" type="text" name="text" >
+    </div>
+    <button class="btn btn-success" type="submit">firsname</button>
+  </form>
+  <!--  روش زیر اسمش viewchield هستش که برای اعتبار سنجی استفاده میشه -->
+  <form (ngSubmit)="onlastSubmit()" #b='ngForm' style="margin-left: 2rem;">
+    <div class="form-group">
+      <label for="last">enter your lastname</label>
+      <input id="last" name="email" class="form-inline"  ngModel required email>
+    </div>
+    <button class="btn btn-info" type="submit" [disabled]="!b.valid" >family</button>
+  </form>
+
+</div>
+</div>
